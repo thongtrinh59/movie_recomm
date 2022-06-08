@@ -1,0 +1,94 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.moviescrollbar {
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.movie-box {
+  display: inline-block;
+  position: relative;
+  margin: 5px;
+  height: 200px;
+  width: 150px;
+  border: 1px solid #dadce0;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.movie-box:hover {
+  height: 200px;
+  width: 250px;
+}
+.movie-box img {
+  position: absolute;
+  width: 100%;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  transition: all 0.3s ease 0s;
+}
+.movie-box:hover img {
+  filter: brightness(0.35);
+}
+.movie-title {
+  display: none;
+  position: absolute;
+  bottom: 35px;
+  left: 16px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+.movie-details {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 16px;
+  color: #fff;
+}
+.movie-box:hover .movie-title {
+  display: block;
+}
+.movie-box:hover .movie-details{
+  display: block;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
